@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=sl, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 700px;
+            height: 500px;
+            margin: 50px 350px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["AMINAH1.jpeg", "AMINAH2.jpeg", "AMINAH3.jpeg", "AMINAH4.jpeg", "AMINAH5.jpeg", "AMINAH6.jpeg", "JISO.jpg"];
+            if(pilihan.value == "AMINAH1"){
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH1")
+            }
+            if(pilihan.value == "AMINAH2"){
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH2")
+            }
+            if(pilihan.value == "AMINAH3"){
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH3")
+            }
+            if(pilihan.value == "AMINAH4"){
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH4")
+            }
+            if(pilihan.value == "AMINAH5"){
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH5")
+            }
+            if(pilihan.value == "AMINAH6"){
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar AMINAH6")
+            }
+            if(pilihan.value == "JISO"){
+                let select = list_image[6];
+                document.getElementById("image").src = `images/${select}`
+                alert("ini gambar JISO")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Alvi Sahri SRG Image Picker</h1></a>
+    <hr>
+    <br>
+    <select name="" id="option" onchange="image_picker()">
+        <option value=""> Pilih Gambar : </option>
+        <option value="AMINAH1">AMINAH1</option>
+        <option value="AMINAH2">AMINAH2</option>
+        <option value="AMINAH3">AMINAH3</option>
+        <option value="AMINAH4">AMINAH4</option>
+        <option value="AMINAH5">AMINAH5</option>
+        <option value="AMINAH6">AMINAH6</option>
+        <option value="JISO">JISO</option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
